@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Post a Job</title>
+    <link rel="icon" href="images/job-finder-logo-vector.jpg" type="icon">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  <style>
+    body {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    min-height: 100vh;
+    padding: 20px;
+  }
+  .form-container {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  .form-container h2 {
+    color: #007bff;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .btn-primary {
+    background-color: #007bff;
+    border: none;
+  }
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  .form-label {
+    font-weight: 500;
+  }
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+  }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="form-container">
+      <h2>Post a Job</h2>
+      <form id="postJobForm">
+        <!-- Company Name -->
+        <div class="mb-3">
+          <label for="companyName" class="form-label">Company Name</label>
+          <input type="text" id="companyName" class="form-control" placeholder="Enter company name">
+          <span id="companyNameError" class="error-message"></span>
+        </div>
+
+        <!-- Job Title -->
+        <div class="mb-3">
+          <label for="jobTitle" class="form-label">Job Title</label>
+          <input type="text" id="jobTitle" class="form-control" placeholder="Enter job title">
+          <span id="jobTitleError" class="error-message"></span>
+        </div>
+
+        <!-- Job Description -->
+        <div class="mb-3">
+          <label for="jobDescription" class="form-label">Job Description</label>
+          <textarea id="jobDescription" class="form-control" rows="4" placeholder="Enter job description"></textarea>
+          <span id="jobDescriptionError" class="error-message"></span>
+        </div>
+
+        <!-- Skills -->
+        <div class="mb-3">
+          <label for="jobSkills" class="form-label">Skills (comma-separated)</label>
+          <input type="text" id="jobSkills" class="form-control" placeholder="e.g., JavaScript, React, Node.js">
+          <span id="jobSkillsError" class="error-message"></span>
+        </div>
+
+        <!-- Experience Level -->
+        <div class="mb-3">
+          <label for="jobExperience" class="form-label">Experience Level</label>
+          <input type="text" id="jobExperience" class="form-control" placeholder="e.g., 2+ years, Beginner">
+          <span id="jobExperienceError" class="error-message"></span>
+        </div>
+
+        <!-- Location -->
+        <div class="mb-3">
+          <label for="jobLocation" class="form-label">Location</label>
+          <input type="text" id="jobLocation" class="form-control" placeholder="Enter location">
+          <span id="jobLocationError" class="error-message"></span>
+        </div>
+
+        <!-- Salary (Optional) -->
+        <div class="mb-3">
+          <label for="jobSalary" class="form-label">Salary (Optional)</label>
+          <input type="text" id="jobSalary" class="form-control" placeholder="Enter salary (optional)">
+        </div>
+
+        <!-- Submit Button -->
+        <button id="postJobBtn" type="button" class="btn btn-primary w-100">Post Job</button>
+      </form>
+    </div>
+  </div>
+
+  <script type="module" src="./postjob.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
